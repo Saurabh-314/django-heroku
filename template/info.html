@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    information
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid bg-success p-4 text-dark bg-opacity-25">
+        <div class="row justify-content-center mt-4">
+            <div class="col-10" style="height: 495px;">
+                <div class="row">
+                    {% for d in id1 %}
+                    <div class="col-4 bg-primary">red</div>
+                    <div class="col-6 bg-info">
+                        <h2>{{d.name}}</h2>
+                        <hr>
+                        <h4>{{d.price}}Rs.</h4>
+                        <h5>{{d.typ}}</h5>
+                        <h6>{{d.brand}}</h6>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+{% endblock %}

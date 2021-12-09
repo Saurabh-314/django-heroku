@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}
+    home
+{% endblock %}
+{% block details %}
+<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="details">Details</a>
+  </li>
+{% endblock %}
+{% block body %}
+    <div class="container-fluid bg-success p-4 text-dark bg-opacity-25">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"> Name</label>
+                        <input type="text" class="form-control form-control-sm shadow bg-body rounded" id="trname" name="name" placeholder=" Name">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"> Price</label>
+                                <input type="text" class="form-control form-control-sm shadow bg-body rounded" id="trprice" name="price" placeholder=" Price">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"> Brand</label>
+                                <input type="text" class="form-control form-control-sm shadow bg-body rounded" id="trbrand" name="brand" placeholder="Brand">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Type</label>
+                        <select class="form-select form-control-sm shadow bg-body rounded" aria-label="Default select example" name="typ">
+                        <option selected>Select Type</option>
+                        <option value="Harrow">Harrow</option>
+                        <option value="Cultivator">Cultivator</option>
+                        <option value="Rotavator">Rotavator</option>
+                        <option value="Plough">Plough</option>
+                        <option value="Paddy Thrasher">Paddy Thrasher</option>
+                        <option value="Dumping Trailer">Dumping Trailer</option>
+                        <option value="4 wheel Trailer">4 wheel Trailer</option>
+                      </select>
+                    </div>
+                    
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                        <textarea class="form-control form-control-sm shadow bg-body rounded" id="exampleFormControlTextarea1" rows="5" name="desc" placeholder="Description"></textarea>
+                      </div>
+
+                    <div class="mb-3">
+                            <label for="formFileSm" class="form-label">Select Image</label>
+                            <input class="form-control form-control-sm shadow bg-body rounded" id="formFileSm" type="file" name="img">
+                    </div>
+                      
+                    <input type="submit" class="btn btn-outline-primary" name="submit" value="submit">
+                    <!-- <button type="button" class="btn btn-outline-primary" name="submit" value="submit">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    
+    
