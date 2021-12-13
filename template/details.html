@@ -42,7 +42,7 @@
                 <div class="card" style="width: 18rem;">
                     <!-- <img src="{% static "dj_app/media/house.jpg" %}" alt="home" /> -->
                     <!-- images/{{i.img}} -->
-                    <img src="{{i.img.url}}" class="card-img-top" alt="...">
+                    <img src="/static/{{i.img}}" class="card-img-top" alt="...">
                     <hr>
                     <div class="card-body">
                       <h5 class="card-title"><a href="/info/{{i.id}}">{{i.name|slice:"0:28"}}</a></h5>
